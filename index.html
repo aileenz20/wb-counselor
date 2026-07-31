@@ -4,6 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>研究生辅导员一体化工作台</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="theme-color" content="#8b5cf6" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="辅导员工作台" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -56,5 +64,15 @@
   <script src="assets/js/views-assistant.js"></script>
   <script src="assets/js/views-party.js"></script>
   <script src="assets/js/views-profile.js"></script>
+  <script>
+    // 注册 Service Worker（仅 https/http 环境，file:// 直接打开时跳过）
+    if ('serviceWorker' in navigator && location.protocol.indexOf('http') === 0) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').catch(function (e) {
+          console.warn('SW 注册失败：', e);
+        });
+      });
+    }
+  </script>
 </body>
 </html>
