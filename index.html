@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>研究生辅导员一体化工作台</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- 侧边栏 -->
+    <aside class="wb-sidebar">
+      <div class="wb-logo">
+        <div class="wb-logo-mark">辅</div>
+        <div class="wb-logo-text">
+          <strong>辅导员工作台</strong>
+          <small>研究生一体化管理</small>
+        </div>
+      </div>
+      <nav class="wb-nav" id="wb-nav"></nav>
+      <div class="wb-side-foot">
+        <div class="wb-stat-mini" id="wb-stat-mini"></div>
+      </div>
+    </aside>
+
+    <!-- 主区域 -->
+    <div class="wb-main">
+      <header class="wb-topbar">
+        <div class="wb-search">
+          <span class="wb-search-icon">🔍</span>
+          <input id="wb-global-search" type="text" placeholder="全局搜索学生姓名 / 学号，回车查看全景档案…" />
+          <div class="wb-search-results" id="wb-search-results"></div>
+        </div>
+        <div class="wb-top-actions">
+          <button class="wb-btn wb-btn-ghost" id="wb-privacy">🔓 隐私保护</button>
+          <button class="wb-btn wb-btn-ghost" id="wb-btn-profile">📋 学生全景档案</button>
+        </div>
+      </header>
+      <main class="wb-content" id="wb-content">
+        <div class="wb-loading">正在加载工作台…</div>
+      </main>
+    </div>
+  </div>
+
+  <!-- 脚本（经典脚本，支持 file:// 直接打开） -->
+  <script src="assets/js/db.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/views-overview.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/views-students.js"></script>
+  <script src="assets/js/views-daily.js"></script>
+  <script src="assets/js/views-awards.js"></script>
+  <script src="assets/js/views-files.js"></script>
+  <script src="assets/js/views-assessment.js"></script>
+  <script src="assets/js/views-self.js"></script>
+  <script src="assets/js/views-assistant.js"></script>
+  <script src="assets/js/views-party.js"></script>
+  <script src="assets/js/views-profile.js"></script>
+</body>
+</html>
